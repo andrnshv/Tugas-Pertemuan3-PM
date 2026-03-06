@@ -9,3 +9,12 @@ bool cekPrima(int angka) {
     }
     return true;
 }
+
+void main() {
+    List<int> daftarAngka = [0, 2, 9, 13, 21];
+
+    for (int n in daftarAngka) {
+    bool prima = cekPrima(n);
+        print("Angka $n: ${prima ? 'Prima' : 'Bukan'}");
+    }
+}
