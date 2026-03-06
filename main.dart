@@ -13,8 +13,14 @@ bool cekPrima(int angka) {
 void main() {
     List<int> daftarAngka = [0, 2, 9, 13, 21];
 
-    for (int n in daftarAngka) {
-    bool prima = cekPrima(n);
-        print("Angka $n: ${prima ? 'Prima' : 'Bukan'}");
+        for (int n in daftarAngka) {
+        // Percabangan if-else if-else
+        if (n < 2) {
+            print("Angka $n \t: Input tidak valid (minimal 2)");
+        } else if (cekPrima(n)) {
+            print("Angka $n \t: Bilangan Prima 🌟");
+        } else {
+            print("Angka $n \t: Bilangan Komposit");
+        }
     }
 }
